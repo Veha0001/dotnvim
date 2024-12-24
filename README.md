@@ -1,6 +1,6 @@
 # AstroNvim Template
 
-**NOTE:** This is for AstroNvim v4+
+<!--**NOTE:** This is for AstroNvim v4+-->
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
@@ -14,6 +14,26 @@ mv ~/.local/share/nvim ~/.local/share/nvim.bak
 mv ~/.local/state/nvim ~/.local/state/nvim.bak
 mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
+## Termux
+
+### Install Required Packages
+
+Run the following command to install the necessary packages in Termux:
+
+```bash
+apt update && apt upgrade
+apt install termux-api python neovim git nodejs-lts ripgrep ruff stylua luarocks lua-language-server fzf clang termux-tools lazygit
+```
+
+### Termux clipboards
+
+For get clipboards from vim to the device.
+
+> Install packages: `apt install termux-api`.
+> Then install Termux:API app from **Github** or **F-Dorid**.
+
+> [!NOTE]
+> No need to install **Termux:API** for **Termux Play Store**.
 
 #### Create a new user repository from this template
 
@@ -23,12 +43,12 @@ You can also just clone this repository directly if you do not want to track you
 
 #### Clone the repository
 
-```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
+```bash
+git clone https://github.com/Veha0001/dotAstroNvim ~/.config/nvim
 ```
 
 #### Start Neovim
 
-```shell
+```bash
 nvim
 ```

@@ -41,6 +41,7 @@ return {
     servers = {
       -- "pyright"
       "lua_ls",
+      "luau_lsp",
       "clangd"
     },
     -- customize language server configuration options passed to `lspconfig`

@@ -11,6 +11,9 @@ return {
   { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.indent.mini-indentscope" },
   { import = "astrocommunity.colorscheme.tokyonight-nvim" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
+  { import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
+
   --{ import = "astrocommunity.lsp.coc-nvim" },
   -- import/override with your plugins folder
 }
