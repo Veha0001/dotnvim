@@ -30,6 +30,7 @@ return {
 
     dashboard.section.header.val = vim.split(logo, "\n")
     -- stylua: ignore
+    local is_linux = jit.os == "Linux"
     local get_icon = require("astroui").get_icon
     dashboard.section.buttons.val = {
       dashboard.button("LDR n  ", get_icon("FileNew", 2, true) .. "New File  "),
@@ -39,11 +40,13 @@ return {
       dashboard.button("LDR f '", get_icon("Bookmarks", 2, true) .. "Bookmarks  "),
       dashboard.button("LDR S l", get_icon("Refresh", 2, true) .. "Last Session  "),
       -- Lazy Buttons
-      dashboard.button("e", "󰁨 " .. " Fix Shebang", "<cmd> lua require('termux').MasonFixShebang()<CR>"),
       dashboard.button("c", " " .. " Config", "<cmd> lua require('telescope.builtin').find_files({ cwd = vim.fn.stdpath('config') })<CR>"),
       dashboard.button("l", "󰒲 " .. " Lazy", "<cmd> Lazy <cr>"),
       dashboard.button("q", " " .. " Quit", "<cmd> qa <cr>"),
     }
+    if is_linux then
+        table.insert(dashboard.section.buttons.val, 7, dashboard.button("e", "󰁨 " .. " Fix Shebang", "<cmd>lua require('termux').MasonFixShebang()<CR>"))
+    end
     for _, button in ipairs(dashboard.section.buttons.val) do
       button.opts.hl = "AlphaButtons"
       button.opts.hl_shortcut = "AlphaShortcut"

@@ -22,7 +22,7 @@ Run the following command to install the necessary packages in Termux:
 
 ```bash
 apt update && apt upgrade
-apt install termux-api python neovim git nodejs-lts ripgrep ruff stylua luarocks lua-language-server fzf clang termux-tools lazygit
+apt install termux-api python neovim git nodejs-lts fd ripgrep ruff stylua luarocks lua-language-server yarn fzf clang termux-tools lazygit
 ```
 
 ### Termux clipboards
