@@ -15,6 +15,8 @@ return {
   --{ import = "astrocommunity.markdown-and-latex.render-markdown-nvim" },
   { import = "astrocommunity.markdown-and-latex.markview-nvim" },
   { import = "astrocommunity.bars-and-lines.vim-illuminate" },
+  { import = "astrocommunity.bars-and-lines.dropbar-nvim" },
+  { import = "astrocommunity.startup.fsplash-nvim" },
   --{ import = "astrocommunity.lsp.coc-nvim" },
   -- import/override with your plugins folder
 }
